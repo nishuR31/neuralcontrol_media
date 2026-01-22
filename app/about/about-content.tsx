@@ -4,11 +4,11 @@ import { AnimatedBackgroundWrapper } from "@/components/animated-background-wrap
 
 export default function AboutContent() {
   return (
-    <AnimatedBackgroundWrapper>
+    // <AnimatedBackgroundWrapper>
       <div className="container max-w-4xl mx-auto px-4 md:px-6 lg:px-8 pt-32">
         {/* Header */}
         <div className="mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">About Neural Control</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">About Neural Control Media</h1>
           <p className="text-lg text-foreground/70">
             A faceless content brand dedicated to understanding how minds work and how systems shape behavior.
           </p>
