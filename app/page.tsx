@@ -16,17 +16,23 @@ export default function Home() {
     {
       id: 1,
       title: "Dark Psychology",
-      description: "Understanding manipulation and human behavior",
+      description: "Understand manipulation, persuasion, and cognitive biases.",
+      detail: "Spot influence patterns, safeguard decisions, and read social dynamics.",
+      bullets: ["Bias spotting", "Persuasion frames", "Defense tactics"],
     },
     {
       id: 2,
       title: "Artificial Intelligence",
-      description: "How AI systems actually work",
+      description: "See how modern AI actually works and where it fails.",
+      detail: "Separate hype from reality: limits, risks, and reliable use-cases.",
+      bullets: ["Model limits", "Safety & ethics", "Practical AI uses"],
     },
     {
       id: 3,
       title: "Technology & Systems",
-      description: "How algorithms shape behavior",
+      description: "How algorithms shape behavior and attention.",
+      detail: "Understand feedback loops, incentives, and how to design better inputs.",
+      bullets: ["Algorithm incentives", "Feedback loops", "Digital hygiene"],
     },
   ];
 
@@ -59,25 +65,31 @@ export default function Home() {
             </p>
 
             <section className="w-full py-12">
-              <Carousel className="w-full justify-center align-middle flex-col flex">
-                <CarouselContent>
+            <CarouselContent>
                   {slides.map((slide) => (
                     <CarouselItem key={slide.id}>
                       <div className="p-4 text-center">
-
                         <h2 className="text-3xl text-balance font-bold mb-4">
                           {slide.title}
                         </h2>
-                        <p className="text-lg text-balance">
+                        <p className="text-lg text-foreground/80 text-balance">
                           {slide.description}
                         </p>
+                        {slide.detail && (
+                          <p className="mt-2 text-sm text-foreground/60 text-balance">
+                            {slide.detail}
+                          </p>
+                        )}
+                        {slide.bullets && (
+                          <ul className="mt-3 space-y-1 text-sm text-foreground/70">
+                            {slide.bullets.map((point) => (
+                              <li key={point}>• {point}</li>
+                            ))}
+                          </ul>
+                        )}
                       </div>
                     </CarouselItem>
                   ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-              </Carousel>
             </section>
 
             {/* CTA */}
