@@ -122,7 +122,7 @@ export default function AboutContent() {
             Neural Control is for people who want to understand how the world works, not how to game it for personal gain. We serve professionals, students, curious minds, and anyone interested in the intersection of psychology, technology, and human behavior.
           </p>
           <p className="text-foreground/70 leading-relaxed">
-            If you\'re looking for personal development hype, productivity hacks, or get-rich-quick schemes, this isn't the place. If you want to understand systems, psychology, and technology at a deeper level, welcome.
+            If you&aposre looking for personal development hype, productivity hacks, or get-rich-quick schemes, this isn&apost the place. If you want to understand systems, psychology, and technology at a deeper level, welcome.
           </p>
         </section>
       </div>

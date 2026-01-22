@@ -17,21 +17,24 @@ export default function Home() {
       id: 1,
       title: "Dark Psychology",
       description: "Understand manipulation, persuasion, and cognitive biases.",
-      detail: "Spot influence patterns, safeguard decisions, and read social dynamics.",
+      detail:
+        "Spot influence patterns, safeguard decisions, and read social dynamics.",
       bullets: ["Bias spotting", "Persuasion frames", "Defense tactics"],
     },
     {
       id: 2,
       title: "Artificial Intelligence",
       description: "See how modern AI actually works and where it fails.",
-      detail: "Separate hype from reality: limits, risks, and reliable use-cases.",
+      detail:
+        "Separate hype from reality: limits, risks, and reliable use-cases.",
       bullets: ["Model limits", "Safety & ethics", "Practical AI uses"],
     },
     {
       id: 3,
       title: "Technology & Systems",
       description: "How algorithms shape behavior and attention.",
-      detail: "Understand feedback loops, incentives, and how to design better inputs.",
+      detail:
+        "Understand feedback loops, incentives, and how to design better inputs.",
       bullets: ["Algorithm incentives", "Feedback loops", "Digital hygiene"],
     },
   ];
@@ -65,7 +68,8 @@ export default function Home() {
             </p>
 
             <section className="w-full py-12">
-            <CarouselContent>
+              <Carousel>
+                <CarouselContent>
                   {slides.map((slide) => (
                     <CarouselItem key={slide.id}>
                       <div className="p-4 text-center">
@@ -90,6 +94,10 @@ export default function Home() {
                       </div>
                     </CarouselItem>
                   ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
             </section>
 
             {/* CTA */}
